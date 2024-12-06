@@ -1,0 +1,12 @@
+var mysql = require('db-mysql');
+
+new mysql.Database({
+hostname: 'localhost',
+user: 'root',
+password: '',
+database: 'node'
+}).on('error', function (err) {
+console.log('An error occured: ' + err);
+}).connect(function (err) {
+console.log('connection established');
+});
