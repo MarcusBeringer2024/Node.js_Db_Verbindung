@@ -1,0 +1,9 @@
+// Neue Datensätze anlegen //
+
+this.query().insert('Addresses',
+['street', 'place', 'country'],
+['Broadway 1', 'New York', 'United States of America']
+).execute(function (err, result) {
+if (err) throw err;
+console.log(result);
+})
